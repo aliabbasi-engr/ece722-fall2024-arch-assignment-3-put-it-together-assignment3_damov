@@ -1,0 +1,26 @@
+cache: L1[7], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: L1[6], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: L1[5], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: L1[4], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: L1[3], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: L1[2], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: L1[1], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: L1[0], numMiss: 2444, numReq: 20481, hitRate: 88.07%, missRate: 11.93%
+cache: LLC[106], numMiss: 257, numReq: 257, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[107], numMiss: 256, numReq: 256, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[104], numMiss: 258, numReq: 258, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[105], numMiss: 258, numReq: 258, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[102], numMiss: 266, numReq: 1322, hitRate: 79.88%, missRate: 20.12%
+cache: LLC[103], numMiss: 256, numReq: 256, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[100], numMiss: 257, numReq: 257, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[101], numMiss: 256, numReq: 256, hitRate: 0.00%, missRate: 100.00%
+cache: L2[12], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cache: L2[13], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cache: L2[10], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cache: L2[11], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cache: L2[16], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cache: L2[17], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cache: L2[14], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cache: L2[15], numMiss: 524, numReq: 1286, hitRate: 59.26%, missRate: 40.74%
+cycles: 30559
+numReqTotal: 164917

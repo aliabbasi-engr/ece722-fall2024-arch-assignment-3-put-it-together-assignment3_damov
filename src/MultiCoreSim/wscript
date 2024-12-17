@@ -3,9 +3,9 @@
 # def options(opt):
 #     pass
 
-#def configure(conf):
+# def configure(conf):
 #     conf.check_nonfatal(header_name='stdint.h', define_name='HAVE_STDINT_H')
-#     conf.check(lib=["model/src/MCSim/libmcsim.a"])
+#     conf.check(lib=["libmcsim.a"])
 
 def build(bld):
     module = bld.create_ns3_module('MultiCoreSim', ['core',])
@@ -54,33 +54,18 @@ def build(bld):
         'model/src/GenericCacheLine.cpp',
         'model/src/CacheDataHandler_COTS.cpp',
         'model/src/MainMemoryController.cpp',
-        'model/src/MCsimInterface.cpp',
+        # 'model/src/MCsimInterface.cpp',
         'model/src/ExternalCPU.cpp',
         'model/src/CacheSim.cpp',
         'model/src/ReplacementPolicies/Random.cpp',
         'model/src/ReplacementPolicies/LeastRecentlyUsed.cpp',
-        'model/src/MCsim/dram/DDR3.cpp',
-        'model/src/MCsim/dram/StatType.cpp',
-        'model/src/MCsim/dram/DDR4.cpp',
-        'model/src/MCsim/dram/DSARP.cpp',
-        'model/src/MCsim/src/RequestScheduler.cpp',
-        'model/src/MCsim/src/CommandQueue.cpp',
-        'model/src/MCsim/src/CommandGenerator.cpp',
-        'model/src/MCsim/src/SimulatorObject.cpp',
-        'model/src/MCsim/src/MemorySystem.cpp',
-        'model/src/MCsim/src/MultiChannelMemorySystem.cpp',
-        'model/src/MCsim/src/MemoryDevice.cpp',
-        'model/src/MCsim/src/ClockDomain.cpp',
-        'model/src/MCsim/src/MemoryController.cpp',
-        'model/src/MCsim/src/Requestor.cpp',
-        'model/src/MCsim/src/RequestQueue.cpp',
-        'model/src/MCsim/src/main.cpp',
-        'model/src/MCsim/src/CommandScheduler.cpp',
-        'model/src/MCsim/src/AddressMapping.cpp'
+
+        'model/src/Protocols/L1MSIProtocol.cpp',
+        'model/src/Protocols/L2MSIProtocol.cpp',
         ]
-    #module.includes = [module.includes, 'model/src/MCsim/src']
-    #module.libpath = 'model/src/MCsim/src'
-    #module.lib = 'mcsim'
+    #module.includes = [module.includes, '/Users/Mhossam/Documents/PhD_Work/MCsim/MCsim/src']
+    # module.libpath = '/Users/Mhossam/Documents/PhD_Work/CacheSim_Stable/cachesim'
+    # module.lib = 'mcsim'
 
     module_test = bld.create_ns3_module_test_library('MultiCoreSim')
     module_test.source = [
@@ -147,72 +132,17 @@ def build(bld):
         'model/header/ReplacementPolicies/ReplacementPolicy.h',
         'model/header/ReplacementPolicies/Random.h',
         'model/header/ReplacementPolicies/LeastRecentlyUsed.h',
-        'model/header/MCsim/MCsimCallback.h',
-        'model/src/MCsim/dram/DSARP.h',
-	'model/src/MCsim/dram/DSARP.h',
-	'model/src/MCsim/dram/DDR3.h',
-	'model/src/MCsim/dram/Statistics.h',
-	'model/src/MCsim/dram/Request.h',
-	'model/src/MCsim/dram/StatType.h',
-	'model/src/MCsim/dram/DRAM.h',
-	'model/src/MCsim/dram/DDR4.h',
-	'model/src/MCsim/src/MemoryDevice.h',
-	'model/header/MCsim/MCsim.h',
-	'model/src/MCsim/src/Ramulator_DDR4.h',
-	'model/src/MCsim/src/MultiChannelMemorySystem.h',
-	'model/src/MCsim/src/CommandQueue.h',
-	'model/src/MCsim/src/MemorySystem.h',
-	'model/src/MCsim/src/Callback.h',
-	'model/src/MCsim/src/CommandGenerator.h',
-	'model/src/MCsim/src/Request.h',
-	'model/src/MCsim/src/global.h',
-	'model/src/MCsim/src/Ramulator_DSARP.h',
-	'model/src/MCsim/src/RequestQueue.h',
-	'model/src/MCsim/src/AddressMapping.h',
-	'model/src/MCsim/src/SimulatorObject.h',
-	'model/src/MCsim/src/SchedulerRegister.h',
-	'model/src/MCsim/src/BusPacket.h',
-	'model/src/MCsim/src/CommandScheduler.h',
-	'model/src/MCsim/src/Ramulator_DDR3.h',
-	'model/src/MCsim/src/MemoryController.h',
-	'model/src/MCsim/src/RefreshMachine.h',
-	'model/src/MCsim/src/Requestor.h',
-	'model/src/MCsim/src/ClockDomain.h',
-	'model/src/MCsim/src/RequestScheduler.h',
-	'model/src/MCsim/system/FCFS/RequestScheduler_FCFS.h',
-	'model/src/MCsim/system/ReOrder/CommandScheduler_ReOrder.h',
-	'model/src/MCsim/system/PipeCAS/CommandGenerator_PipeCAS.h',
-	'model/src/MCsim/system/PipeCAS/RequestScheduler_PipeCAS.h',
-	'model/src/MCsim/system/PipeCAS/CommandScheduler_PIPECAS.h',
-	'model/src/MCsim/system/FRFCFS/CommandScheduler_FRFCFS.h',
-	'model/src/MCsim/system/FRFCFS/RequestScheduler_FRFCFS.h',
-	'model/src/MCsim/system/RTMem/RequestScheduler_RTMem.h',
-	'model/src/MCsim/system/RTMem/CommandScheduler_RTMem.h',
-	'model/src/MCsim/system/FRFCFS_Batch/CommandScheduler_FRFCFS.h',
-	'model/src/MCsim/system/FRFCFS_Batch/RequestScheduler_FRFCFS_Batching.h',
-	'model/src/MCsim/system/PMC/RequestScheduler_PMC.h',
-	'model/src/MCsim/system/DCmc/CommandScheduler_DCmc.h',
-	'model/src/MCsim/system/MCMC/RequestScheduler_MCMC.h',
-	'model/src/MCsim/system/MCMC/CommandGenerator_MCMC.h',
-	'model/src/MCsim/system/PAR-BS/RequestScheduler_PAR-BS.h',
-	'model/src/MCsim/system/BLISS/RequestScheduler_BLISS.h',
-	'model/src/MCsim/system/ROC/CommandScheduler_ROC.h',
-	'model/src/MCsim/system/Round/CommandGenerator_Round.h',
-	'model/src/MCsim/system/Round/CommandScheduler_Round.h',
-	'model/src/MCsim/system/ORP/CommandScheduler_ORP.h',
-	'model/src/MCsim/system/RankReOrder/CommandScheduler_RankReOrder.h',
-	'model/src/MCsim/system/MAG/CommandScheduler_MAG.h',
-	'model/src/MCsim/system/MEDUSA/RequestScheduler_MEDUSA.h',
-	'model/src/MCsim/generalScheduler/RequestScheduler_DIRECT.h',
-	'model/src/MCsim/generalScheduler/CommandScheduler_FCFS.h',
-	'model/src/MCsim/generalScheduler/CommandGenerator_OPEN.h',
-	'model/src/MCsim/generalScheduler/RequestScheduler_RR.h',
-	'model/src/MCsim/generalScheduler/CommandScheduler_PUSH.h',
-	'model/src/MCsim/generalScheduler/CommandGenerator_CLOSE.h',        
+
+        'model/header/Protocols/L1MSIProtocol.h',
+        'model/header/Protocols/L2MSIProtocol.h',
+        
+        # 'model/header/MCsim/MCsim.h',
+        # 'model/header/MCsim/MCsimCallback.h',
         ]
-    #headers.source = [headers.source, 'model/src/MCsim/src']
+    #headers.source = [headers.source, '/Users/Mhossam/Documents/PhD_Work/MCsim/MCsim/src']
 
     if bld.env.ENABLE_EXAMPLES:
         bld.recurse('examples')
 
     # bld.ns3_python_bindings()
+

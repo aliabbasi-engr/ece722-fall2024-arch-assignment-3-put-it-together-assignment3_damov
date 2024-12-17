@@ -1,0 +1,62 @@
+  // iterate over L2s
+  int core_num = 0;
+  int l1_itr = 0;
+  for (list<CacheXml>::iterator L2 = xmlL2Caches.begin(); L2 != xmlL2Caches.end(); L2++)
+  {
+    CacheXml L2CacheXml = *L2;
+
+    list<CacheXml> L2CacheXml_list;
+    L2CacheXml_list.push_back(L2CacheXml);
+
+    list<CacheXml> currentL1CacheXml_list;
+    std::list<CacheXml>::iterator it = xmlL1Caches.begin();
+    for (; l1_itr < xmlL1Caches.size()/xmlL2Caches.size(); l1_itr++)
+    {
+      std::advance(it, l1_itr);
+      currentL1CacheXml_list.push_back(*it);
+    }
+
+    l1_l2_bus = new TripleBus(
+      currentL1CacheXml_list, L2CacheXml_list, projectXmlCfg.GetBusFIFOSize(), L1BusCnfg.GetReqBusLatcy(), L1BusCnfg.GetRespBusLatcy());
+    l1_l2_bus_list.push_back(l1_l2_bus);
+    
+    for (list<CacheXml>::iterator L1 = xmlL1Caches.begin(); L1 != xmlL1Caches.end() && core_num < projectXmlCfg.GetNumPrivCore(); L1++, core_num++)
+    {
+      CacheXml L1CacheXml = *L1;
+
+    /*
+     * instantiate cpu FIFOs
+     */
+    CpuFIFO *newCpuFIFO = new CpuFIFO(L1CacheXml.GetCacheId(), projectXmlCfg.GetCpuFIFOSize());
+    m_cpuFIFO.push_back(newCpuFIFO);
+
+    /*
+     * instantiate cpu cores
+     */
+    Ptr<CpuCoreGenerator> newCpuCore = CreateObject<CpuCoreGenerator>(newCpuFIFO);
+    stringstream bmTraceFile, cpuTraceFile, ctrlTraceFile;
+    bmTraceFile << projectXmlCfg.GetBMsPath() << "/trace_C" << L1->GetCacheId() << ".trc.shared";
+    cpuTraceFile << projectXmlCfg.GetBMsPath() << "/" << projectXmlCfg.GetCpuTraceFile() <<L1->GetCacheId() << ".txt";
+    ctrlTraceFile << projectXmlCfg.GetBMsPath() << "/" << projectXmlCfg.GetCohCtrlsTraceFile() << L1->GetCacheId() << ".txt";
+    double cpuClkPeriod = L1->GetCpuClkNanoSec();
+    double cpuClkSkew = cpuClkPeriod * L1->GetCpuClkSkew() / 100.00;
+    newCpuCore->SetCoreId(L1->GetCacheId());
+    newCpuCore->SetBmFileName(bmTraceFile.str());
+    newCpuCore->SetCpuTraceFile(cpuTraceFile.str());
+    newCpuCore->SetCtrlsTraceFile(ctrlTraceFile.str());
+    newCpuCore->SetDt(cpuClkPeriod);
+    newCpuCore->SetClkSkew(cpuClkSkew);
+    newCpuCore->SetLogFileGenEnable(m_logFileGenEnable);
+    newCpuCore->SetOutOfOrderStages(projectXmlCfg.GetOutOfOrderStages());
+    m_cpuCoreGens.push_back(newCpuCore);
+
+    bm_paths.push_back(bmTraceFile.str());
+
+    // L1 <--> L2
+    CommunicationInterface* l1_l2_interface = l1_l2_bus->getInterfaceFor(L1CacheXml.GetCacheId());
+    CommunicationInterface* l2_l1_interface = l1_l2_bus->getInterfaceFor(L2CacheXml.GetCacheId());
+   
+
+
+    }
+  }
