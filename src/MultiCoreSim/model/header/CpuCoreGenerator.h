@@ -59,8 +59,8 @@ namespace ns3 {
     // The output stream for internal ctrl(s) tracing
     std::ofstream m_ctrlsTrace;
 
-     // A pointer to CPU Interface FIFO
-     CpuFIFO* m_cpuFIFO;
+    // A pointer to CPU Interface FIFO
+    CpuFIFO* m_cpuFIFO;
 
     // Cpu request done flag
     bool m_cpuReqDone;
@@ -82,6 +82,8 @@ namespace ns3 {
     // from assoicatedBuffers.
     void ProcessTxBuf();
     void ProcessRxBuf();
+
+    void PushToCache();
 
   public:
     // Override TypeId.

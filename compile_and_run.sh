@@ -8,7 +8,8 @@
 # the following is an example: 
 # ./compile_and_run.sh tools/x86_trace_generator/LAB3_Configurations/lab3_1_8KB_64B_1_RANDOM_32KB_64_2_LRU.xml tools/x86_trace_generator/LAB3_BMs/cache_test_4KB_4_1.c
 
-BM=./tools/Assignment2/cache_test_16KB_STRIDE4_ITER5
+# BM=./tools/Assignment2/cache_test_16KB_STRIDE4_ITER5
+BM=./trace
 
 # filename="${2##*/}"
 # BM="${2%.*}"
