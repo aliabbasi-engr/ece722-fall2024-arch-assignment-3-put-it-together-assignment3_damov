@@ -35,8 +35,8 @@ MCoreSimProject::MCoreSimProject(MCoreSimProjectXml projectXmlCfg)
   m_logFileGenEnable = projectXmlCfg.GetLogFileGenEnable();
 
   // setup1(projectXmlCfg);
-  setup2(projectXmlCfg);
-  // setup4(projectXmlCfg);
+  // setup2(projectXmlCfg);
+  setup4(projectXmlCfg);
   // setup5(projectXmlCfg);
   // setup6(projectXmlCfg);
 }
