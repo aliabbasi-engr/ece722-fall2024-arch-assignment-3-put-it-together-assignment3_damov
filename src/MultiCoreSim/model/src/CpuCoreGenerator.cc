@@ -244,7 +244,7 @@ namespace ns3 {
               // construct the sample request
               Instruction::Type type_enum = (typeChar == 'R') ? Instruction::LOAD : Instruction::STORE;
               memInstruction.setType(type_enum);
-              memInstruction.setAddr(std::stoull(addr, nullptr, 10));
+              memInstruction.setAddr(std::stoull(addr, nullptr, 16));
               memInstruction.setReady(false);
 
               if (CUSTOM_DEBUG) {
