@@ -25,10 +25,10 @@
 
 // simulation parameters
 #define CUSTOM_DEBUG 0
-#define OOO_STAGES 8
+#define OOO_STAGES 4
 #define IPC 4
-#define LSQ_SIZE 64
-#define ROB_SIZE 256
+#define LSQ_SIZE 32
+#define ROB_SIZE 128
 
 namespace ns3 {
 
