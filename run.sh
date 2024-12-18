@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./waf configure
+
 if [ "$3" == "-gdb" ]; then
     ./waf --run scratch/MultiCoreSimulator \
           --command-template="gdb --args %s --CfgFile=$1 --BMsPath=$2 --LogFileGenEnable=1"
