@@ -54,7 +54,7 @@ namespace ns3
 
         inline uint64_t calculate_bank(uint64_t address)
         {
-            return ((address >>((int)log2(m_llc_line_size)) )) & (m_llc_nbanks - 1));
+            return ((address >>((int)log2(m_llc_line_size)))) & (m_llc_nbanks - 1);
         }
 
     public:

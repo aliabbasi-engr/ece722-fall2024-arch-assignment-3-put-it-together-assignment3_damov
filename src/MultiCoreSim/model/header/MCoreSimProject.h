@@ -23,7 +23,7 @@
 #include "ns3/DirectInterconnect.h"
 #include "CommunicationInterface.h"
 #include "MainMemoryController.h"
-// #include "MCsimInterface.h"
+#include "MCsimInterface.h"
 
 #include <string>
 #include <unistd.h>
@@ -80,7 +80,7 @@ private:
     //CacheController* m_SharedCacheCtrl;
 
     MainMemoryController* m_main_memory;
-    // MCsimInterface* m_mcsim_interface;
+    MCsimInterface* m_mcsim_interface;
     // // A pointer to shared cache Bus IF buffers
     // BusIfFIFO* m_sharedCacheBusIfFIFO;
 

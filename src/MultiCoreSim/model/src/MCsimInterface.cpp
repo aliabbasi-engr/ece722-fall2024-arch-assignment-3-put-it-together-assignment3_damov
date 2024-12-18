@@ -26,8 +26,8 @@ namespace ns3
         m_clk_skew = projectXml.GetDRAMCtrlClkSkew();
         m_clk_cycle = 1;
 
-        m_llc_line_size = projectXml.GetSharedCache().Begin().GetBlockSize();
-        m_llc_nbanks = projectXml.GetSharedCache().Begin().GetNBanks();
+        m_llc_line_size = projectXml.GetSharedCache().begin()->GetBlockSize();
+        m_llc_nbanks = projectXml.GetSharedCache().begin()->GetNBanks();
 
         m_read_count = 0;
         m_write_count = 0;
@@ -41,10 +41,10 @@ namespace ns3
 
         m_mcsim = MCsim::getMemorySystemInstance(
             num_cores,
-            "/Users/Mhossam/Documents/PhD_Work/MCsim/MCsim/system/FRFCFS/FRFCFS.ini", // this should be parameterized
-            "DDR3",
-            "1600H",
-            "2Gb_x8",
+            "/home/ali/assignments/assignment3/ece722-fall2024-arch-assignment-3-put-it-together-assignment3_damov/src/MultiCoreSim/model/src/MCsim/system/FRFCFS/FRFCFS.ini", // this should be parameterized
+            "DDR4",
+            "2400H",
+            "8Gb_x8",
             1,
             1); // 2048*4 = 4 ranks
         m_mcsim->setCPUClockSpeed(1e9);
@@ -116,6 +116,7 @@ namespace ns3
         {
             msg.source = Message::Source::LOWER_INTERCONNECT;
             msg.cycle = m_clk_cycle;
+            msg.owner = 0;
             if (buf.pushBack(msg, FRFCFS_State::Ready))
                 m_lower_interface->popFrontMessage();
         }
@@ -140,8 +141,8 @@ namespace ns3
                                       m_pending_requests[i].addr,   // Addr
                                       m_clk_cycle,                  // Cycle
                                       0,                            // Complementary_value
-                                      m_pending_requests[i].owner); // Owner
-                msg.to.push_back((uint16_t)m_llc_id[calculate_bank(m_pending_requests[i].addr)])      // To
+                                      10);                          // Owner
+                msg.to.push_back((uint16_t)m_llc_id[calculate_bank(m_pending_requests[i].addr)]);      // To
                 msg.copy((uint8_t *)&data);
                 m_output_buffer.push_back(msg);
 

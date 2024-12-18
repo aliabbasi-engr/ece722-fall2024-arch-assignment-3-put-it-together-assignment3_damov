@@ -298,7 +298,8 @@ void MCoreSimProject::setup2(MCoreSimProjectXml projectXmlCfg)
   CommunicationInterface* DRAM_LLC_interface = bus2->getInterfaceFor(projectXmlCfg.GetDRAMId());
 
   // DRAM Controller
-  m_main_memory = new MainMemoryController(projectXmlCfg, DRAM_LLC_interface, sharedMemIds);
+  // m_main_memory = new MainMemoryController(projectXmlCfg, DRAM_LLC_interface, sharedMemIds);
+  m_mcsim_interface = new MCsimInterface(projectXmlCfg, DRAM_LLC_interface, sharedMemIds);
 
   Logger::getLogger()->registerReportPath(projectXmlCfg.GetBMsPath() + string("/newLogger"));   
 
@@ -377,7 +378,8 @@ void MCoreSimProject::setup4(MCoreSimProjectXml projectXmlCfg)
   CommunicationInterface* dram_llc_interface = llc_dram_bus->getInterfaceFor(projectXmlCfg.GetDRAMId());
 
   // DRAM Controller
-  m_main_memory = new MainMemoryController(projectXmlCfg, dram_llc_interface, sharedMemIds);
+  // m_main_memory = new MainMemoryController(projectXmlCfg, dram_llc_interface, sharedMemIds);
+  m_mcsim_interface = new MCsimInterface(projectXmlCfg, dram_llc_interface, sharedMemIds);
 
   /* CPUs, L1s,  and L2s Setup*/
   int core_num = 0;
@@ -892,8 +894,8 @@ void MCoreSimProject::Start()
   // m_SharedCacheCtrl->initializeCacheData(bm_paths);
 
   // m_dramCtrl->init();
-  m_main_memory->init();
-  // m_mcsim_interface->init();
+  // m_main_memory->init();
+  m_mcsim_interface->init();
 
   // m_busArbiter->init();
   
