@@ -31,7 +31,13 @@ LOG_PATH="tools/Assignment3/logs/$LOG_FILE_NAME"
 # echo "LOG_FILE_NAME = $LOG_FILE_NAME"
 # echo "LOG_PATH = $LOG_PATH"
 
+SECONDS=0
+
 ./waf --run "scratch/MultiCoreSimulator --CfgFile=$CFG_PATH --BMsPath=$BM_PATH --LogFileGenEnable=1" 2>&1 | tee "$LOG_PATH"
+
+elapsed_time=$SECONDS
+
+echo "Execution time: ${elapsed_time} seconds" | tee -a "$LOG_PATH"
 
 cd tools/Assignment3/scripts/
 
