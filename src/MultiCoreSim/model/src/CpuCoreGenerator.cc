@@ -26,7 +26,7 @@
 // simulation parameters
 #define CUSTOM_DEBUG 0
 #define OOO_STAGES 4
-#define IPC 4
+#define IPC 32
 #define LSQ_SIZE 32
 #define ROB_SIZE 128
 
