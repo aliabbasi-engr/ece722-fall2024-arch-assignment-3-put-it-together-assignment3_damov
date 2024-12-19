@@ -2,3 +2,4 @@
 build/
 trace/
 .lock-waf_linux_build
+tools/Assignment3/workload/
