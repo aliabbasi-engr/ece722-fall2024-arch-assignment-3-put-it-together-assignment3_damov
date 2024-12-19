@@ -1,3 +1,12 @@
+# 🌟🎄 **Christmas Quote** 🎅✨
+> _"Peace on earth will come to stay when we live Christmas every day."_  
+— **Helen Steiner Rice**  
+
+
+_"...But peace in my mind will come only after I finish this assignment."_ 🎅  
+— **Ali Abbasi** 
+
+
 # ECE722, Assignment 3: Putting It Together!
 
 **Course:** Advanced Computer Architecture (ECE722), Fall 2024  
@@ -7,6 +16,20 @@
 **Student:** Ali Abbasi  
 **MacID:** abbasa46  
 **Date Submitted:** 2024-12-22
+
+## Repository Initialization
+
+Since this assignment uses MCsim DRAM simulator along with the Octupus, MCsim is defined as a submodule of this repository. Please follow the step below to clone sources:
+
+```
+git clone git@github.com:aliabbasi-engr/ece722-fall2024-arch-assignment-3-put-it-together-assignment3_damov.git
+cd ece722-fall2024-arch-assignment-3-put-it-together-assignment3_damov/
+git checkout MCsim
+git submodule init
+git submodule update
+```
+
+P.S. This repository has two branches: The "main" branch holds the Octopus version integrating assignment 1 and assignment 2. The "MCsim" branch is the same as the main branch where the fixed-latency DRAM is replaced with MCsim.
 
 ## New Directories and Files
 
