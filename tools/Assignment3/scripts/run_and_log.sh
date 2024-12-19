@@ -19,8 +19,8 @@ fi
 
 cd ../../../
 
-CFG_PATH=tools/Assignment3/scripts/$1
-BM_PATH=tools/Assignment3/scripts/$2
+CFG_PATH="tools/Assignment3/scripts/$1"
+BM_PATH="tools/Assignment3/scripts/$2"
 APP_NAME=$(basename "$BM_PATH")
 LOG_FILE_NAME="$APP_NAME.log"
 LOG_PATH="tools/Assignment3/logs/$LOG_FILE_NAME"
@@ -34,6 +34,7 @@ LOG_PATH="tools/Assignment3/logs/$LOG_FILE_NAME"
 SECONDS=0
 
 ./waf --run "scratch/MultiCoreSimulator --CfgFile=$CFG_PATH --BMsPath=$BM_PATH --LogFileGenEnable=1" 2>&1 | tee "$LOG_PATH"
+# ./waf --run "scratch/MultiCoreSimulator --CfgFile=$CFG_PATH --BMsPath=$BM_PATH --LogFileGenEnable=1" > "$LOG_PATH" 2>&1
 
 elapsed_time=$SECONDS
 
