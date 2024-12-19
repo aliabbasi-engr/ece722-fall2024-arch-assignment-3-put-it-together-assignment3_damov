@@ -1,0 +1,3 @@
+[submodule "src/MultiCoreSim/model/src/MCsim"]
+	path = src/MultiCoreSim/model/src/MCsim
+	url = https://github.com/aliabbasi-engr/MCsim
