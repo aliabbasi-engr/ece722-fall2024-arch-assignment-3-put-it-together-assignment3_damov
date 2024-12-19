@@ -141,7 +141,8 @@ namespace ns3
                                       m_pending_requests[i].addr,   // Addr
                                       m_clk_cycle,                  // Cycle
                                       0,                            // Complementary_value
-                                      10);                          // Owner
+                                      m_pending_requests[i].owner); // Owner
+                msg.owner = 10;
                 msg.to.push_back((uint16_t)m_llc_id[calculate_bank(m_pending_requests[i].addr)]);      // To
                 msg.copy((uint8_t *)&data);
                 m_output_buffer.push_back(msg);
