@@ -34,8 +34,13 @@ done
 for TRC in "$APPS_DIR"/*/trace_C0.trc.shared; do
     if [ -f "$TRC" ]; then
         TMP_FILE="${FILE}.tmp"
-        # awk -v num_req="$NUM_REQ" 'NR == 1 { $1 = 0; print $0; next } NR <= num_req { print $0 }' "$TRC" > "$TMP_FILE"
-        awk -v num_req="$NUM_REQ" 'NR <= num_req { $1 = 0; print }' "$TRC" > "$TMP_FILE"
+
+        # use the command below to change the number of compute instructions for the FIRST request to zero
+        awk -v num_req="$NUM_REQ" 'NR == 1 { $1 = 0; print $0; next } NR <= num_req { print $0 }' "$TRC" > "$TMP_FILE"
+        
+        # use the command below to change the number of compute instructions for ALL requests to zero
+        # awk -v num_req="$NUM_REQ" 'NR <= num_req { $1 = 0; print }' "$TRC" > "$TMP_FILE"
+
         mv "$TMP_FILE" "$TRC"
     fi
 done

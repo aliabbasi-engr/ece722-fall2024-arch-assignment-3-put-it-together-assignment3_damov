@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ]; then
-  echo "Usage: $0 <cfg_file> <apps_dir>"
+  echo "Usage: $0 <cfg_file> <apps_dir> [-gdb]"
   exit 1
 fi
 
@@ -29,7 +29,11 @@ for app_dir in "$apps_dir"/*/; do
     current_app="$app_dir"
     echo "Running: $0 $cfg_file $app_dir" | tee -a $log_file
     SECONDS=0
-    ./run_and_log.sh $cfg_file $current_app
+    if [ "$3" == "-gdb" ]; then
+        ./run_and_log.sh $cfg_file $current_app -gdb
+    else
+        ./run_and_log.sh $cfg_file $current_app
+    fi
     elapsed_time=$SECONDS
     echo "Execution time: ${elapsed_time} seconds" | tee -a $log_file
   fi
