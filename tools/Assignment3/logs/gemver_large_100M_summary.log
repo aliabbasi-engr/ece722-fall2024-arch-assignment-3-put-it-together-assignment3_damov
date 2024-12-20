@@ -1,0 +1,21 @@
+cache: L1[0], numMiss: 5502, numReq: 192059, hitRate: 97.14%, missRate: 2.86%
+cache: L2[10], numMiss: 3005, numReq: 4830, hitRate: 37.79%, missRate: 62.21%
+cache: LLC[100], numMiss: 188, numReq: 250, hitRate: 24.80%, missRate: 75.20%
+cache: LLC[101], numMiss: 188, numReq: 251, hitRate: 25.10%, missRate: 74.90%
+cache: LLC[102], numMiss: 187, numReq: 250, hitRate: 25.20%, missRate: 74.80%
+cache: LLC[103], numMiss: 187, numReq: 250, hitRate: 25.20%, missRate: 74.80%
+cache: LLC[104], numMiss: 187, numReq: 250, hitRate: 25.20%, missRate: 74.80%
+cache: LLC[105], numMiss: 187, numReq: 250, hitRate: 25.20%, missRate: 74.80%
+cache: LLC[106], numMiss: 188, numReq: 251, hitRate: 25.10%, missRate: 74.90%
+cache: LLC[107], numMiss: 189, numReq: 252, hitRate: 25.00%, missRate: 75.00%
+cache: LLC[108], numMiss: 188, numReq: 251, hitRate: 25.10%, missRate: 74.90%
+cache: LLC[109], numMiss: 188, numReq: 251, hitRate: 25.10%, missRate: 74.90%
+cache: LLC[110], numMiss: 188, numReq: 250, hitRate: 24.80%, missRate: 75.20%
+cache: LLC[111], numMiss: 188, numReq: 250, hitRate: 24.80%, missRate: 75.20%
+cache: LLC[112], numMiss: 188, numReq: 250, hitRate: 24.80%, missRate: 75.20%
+cache: LLC[113], numMiss: 189, numReq: 251, hitRate: 24.71%, missRate: 75.29%
+cache: LLC[114], numMiss: 188, numReq: 250, hitRate: 24.80%, missRate: 75.20%
+cache: LLC[115], numMiss: 187, numReq: 249, hitRate: 24.90%, missRate: 75.10%
+cache: LLC[all], numMiss: 3005, numReq: 4006, hitRate: 24.99%, missRate: 75.01%
+Unable to grep simDoneLine!
+numReqTotal: 576996

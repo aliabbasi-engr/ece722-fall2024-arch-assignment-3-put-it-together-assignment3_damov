@@ -1,0 +1,21 @@
+cache: L1[0], numMiss: 39, numReq: 193, hitRate: 79.80%, missRate: 20.20%
+cache: L2[10], numMiss: 39, numReq: 62, hitRate: 37.10%, missRate: 62.90%
+cache: LLC[100], numMiss: 2, numReq: 4, hitRate: 50.00%, missRate: 50.00%
+cache: LLC[101], numMiss: 2, numReq: 3, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[102], numMiss: 2, numReq: 3, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[103], numMiss: 2, numReq: 4, hitRate: 50.00%, missRate: 50.00%
+cache: LLC[104], numMiss: 2, numReq: 2, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[105], numMiss: 3, numReq: 5, hitRate: 40.00%, missRate: 60.00%
+cache: LLC[106], numMiss: 2, numReq: 2, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[107], numMiss: 2, numReq: 3, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[108], numMiss: 3, numReq: 4, hitRate: 25.00%, missRate: 75.00%
+cache: LLC[109], numMiss: 2, numReq: 3, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[110], numMiss: 2, numReq: 4, hitRate: 50.00%, missRate: 50.00%
+cache: LLC[111], numMiss: 3, numReq: 5, hitRate: 40.00%, missRate: 60.00%
+cache: LLC[112], numMiss: 2, numReq: 4, hitRate: 50.00%, missRate: 50.00%
+cache: LLC[113], numMiss: 4, numReq: 6, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[114], numMiss: 3, numReq: 5, hitRate: 40.00%, missRate: 60.00%
+cache: LLC[115], numMiss: 3, numReq: 5, hitRate: 40.00%, missRate: 60.00%
+cache: LLC[all], numMiss: 39, numReq: 62, hitRate: 37.10%, missRate: 62.90%
+cycles: 1627
+numReqTotal: 1476

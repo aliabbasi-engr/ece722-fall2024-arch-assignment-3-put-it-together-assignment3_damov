@@ -1,0 +1,42 @@
+cache: L1[0], numMiss: 8936, numReq: 1000000, hitRate: 99.11%, missRate: 0.89%
+cache: L2[10], numMiss: 2876, numReq: 5779, hitRate: 50.24%, missRate: 49.76%
+cache: LLC[100], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[101], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[102], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[103], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[104], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[105], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[106], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[107], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[108], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[109], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[110], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[111], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[112], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[113], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[114], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[115], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[all], numMiss: 2876, numReq: 2876, hitRate: 0.00%, missRate: 100.00%
+cycles: 1060721
+numReqTotal: 3812364
+cache: L1[0], numMiss: 8936, numReq: 1000000, hitRate: 99.11%, missRate: 0.89%
+cache: L2[10], numMiss: 2876, numReq: 5779, hitRate: 50.24%, missRate: 49.76%
+cache: LLC[100], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[101], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[102], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[103], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[104], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[105], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[106], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[107], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[108], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[109], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[110], numMiss: 180, numReq: 180, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[111], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[112], numMiss: 181, numReq: 181, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[113], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[114], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[115], numMiss: 178, numReq: 178, hitRate: 0.00%, missRate: 100.00%
+cache: LLC[all], numMiss: 2876, numReq: 2876, hitRate: 0.00%, missRate: 100.00%
+cycles: 1060721
+numReqTotal: 3812364

@@ -1,0 +1,21 @@
+cache: L1[0], numMiss: 1002, numReq: 77046, hitRate: 98.70%, missRate: 1.30%
+cache: L2[10], numMiss: 753, numReq: 1223, hitRate: 38.44%, missRate: 61.56%
+cache: LLC[100], numMiss: 38, numReq: 57, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[101], numMiss: 58, numReq: 82, hitRate: 29.27%, missRate: 70.73%
+cache: LLC[102], numMiss: 39, numReq: 58, hitRate: 32.76%, missRate: 67.24%
+cache: LLC[103], numMiss: 56, numReq: 80, hitRate: 30.00%, missRate: 70.00%
+cache: LLC[104], numMiss: 38, numReq: 57, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[105], numMiss: 57, numReq: 81, hitRate: 29.63%, missRate: 70.37%
+cache: LLC[106], numMiss: 40, numReq: 60, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[107], numMiss: 56, numReq: 80, hitRate: 30.00%, missRate: 70.00%
+cache: LLC[108], numMiss: 38, numReq: 57, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[109], numMiss: 57, numReq: 81, hitRate: 29.63%, missRate: 70.37%
+cache: LLC[110], numMiss: 38, numReq: 57, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[111], numMiss: 55, numReq: 78, hitRate: 29.49%, missRate: 70.51%
+cache: LLC[112], numMiss: 38, numReq: 57, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[113], numMiss: 54, numReq: 77, hitRate: 29.88%, missRate: 70.12%
+cache: LLC[114], numMiss: 36, numReq: 54, hitRate: 33.34%, missRate: 66.66%
+cache: LLC[115], numMiss: 55, numReq: 78, hitRate: 29.49%, missRate: 70.51%
+cache: LLC[all], numMiss: 753, numReq: 1094, hitRate: 31.18%, missRate: 68.82%
+Unable to grep simDoneLine!
+numReqTotal: 228635
