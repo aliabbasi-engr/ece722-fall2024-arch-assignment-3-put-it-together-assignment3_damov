@@ -29,8 +29,6 @@ git submodule init
 git submodule update
 ```
 
-P.S. This repository has two branches: The "main" branch holds the Octopus version integrating assignment 1 and assignment 2. The "MCsim" branch is the same as the main branch where the fixed-latency DRAM is replaced with MCsim.
-
 ## Report
 
 The paper proposes several architecture dependant and independant, which they have used to classify applications. The list of these metrics are provided below:
